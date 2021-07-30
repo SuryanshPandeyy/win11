@@ -8,6 +8,8 @@ body{
  /* background-size: cover; */
  overflow: hidden;
  height: 100vh;
+ user-select:none;
+ -webkit-user-select: none;
 }
 .content{
 overflow: hidden;
@@ -28,6 +30,7 @@ video{
  background-color: #f3f3f3;
  z-index: 100;
 }
+
 .right{
  position: absolute;
  right: 0;
@@ -41,7 +44,7 @@ video{
  /* bottom: 50px; */
  bottom: -550px;
  width: 90vw;
- max-width: 500px;
+ max-width: 450px;
  transition: all 0.3s ease-in;
  border: 1px solid black;
 }
@@ -50,7 +53,6 @@ video{
  flex-direction: column;
  align-items:center;
  text-align: center;
- height: 100%;
  width: 100%;
 }
 
@@ -66,4 +68,93 @@ video{
  justify-content:center;
  align-items: center;
  flex-direction: column;
+}
+
+.apps ul{
+ list-style: none;
+ /* overflow-x: scroll; */
+ /* width: 100vw; */
+ /* height: 100%; */
+ /* position: absolute; */
+ /* bottom: -270px; */
+}
+.apps li{
+ display: inline-block;
+ padding: 5px;
+ 
+}
+.apps li i{
+ font-size:30px;
+}
+.apps li:hover{
+ background-color: grey;
+}
+.apps li:first-child:hover i {
+ color: white;
+}
+
+.apps li:first-child i{
+ color: #0f8ad4;
+}
+.apps-icon.change{
+ position: relative;
+ background-color: grey;
+}
+.apps-icon.change:after {
+ display: block;
+ content: '';
+ width: 100%;
+ height: 3px;
+ background: black;
+ position: absolute;
+ bottom: .5px;
+ left: 0;
+}
+
+.windows{
+ display: flex;
+ flex-direction: column;
+ align-items:center;
+}
+
+.windows .app{
+ display: none;
+ position: absolute;
+ background-color: white;
+ border: 1px solid grey;
+ box-shadow: .05px .05px 6px .1px rgba(0, 0, 0, 0.5);
+ width: 90vw;
+max-width: 500px;
+height: 90vh;
+max-height: 400px;
+}
+
+.windows .app.change{
+ display: block;
+ z-index: 2000;
+}
+
+.windows .app .header{
+ width: 100%;
+ height: 25px;
+ background-color: rgb(77, 77, 77);
+ padding:0;
+ margin: 0;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: flex-end;
+}
+.header ul{
+ list-style: none;
+}
+.header ul li{
+ display: inline-block;
+ color: white;
+}
+.header ul li i{
+ padding: 5px;
+}
+.header ul li:hover{
+ background-color: grey;
 }
