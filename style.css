@@ -16,7 +16,7 @@ video{
 
 .taskbar{
  position: absolute;
- bottom:-10px;
+ bottom:0px;
  display: flex;
  justify-content:center;
  width: 100%;
