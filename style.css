@@ -9,9 +9,14 @@ body{
  overflow: hidden;
  height: 100vh;
 }
+.content{
+overflow: hidden;
+}
 video{
- width: 100vw;
- height: 100vh;
+ width: 100%;
+ position: absolute;
+ bottom: 0px;
+ z-index: -1;
 }
 
 .taskbar{
@@ -35,13 +40,23 @@ video{
  position: absolute;
  /* bottom: 50px; */
  bottom: -550px;
- width: 100%;
- text-align: center;
+ width: 90vw;
+ max-width: 500px;
  transition: all 0.3s ease-in;
+ border: 1px solid black;
 }
+.startmenu-box{
+ display: flex;
+ flex-direction: column;
+ align-items:center;
+ text-align: center;
+ height: 100%;
+ width: 100%;
+}
+
 .startmenu img{
  border-radius: 8px;
- width: 500px;
+ width: 100%;
 }
 .icons{
  margin: 10px;
